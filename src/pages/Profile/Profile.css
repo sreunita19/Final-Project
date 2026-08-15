@@ -1,0 +1,96 @@
+.profile-page {
+  padding: 70px 8%;
+  min-height: 60vh;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin-bottom: 60px;
+}
+
+.profile-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: #1a1409;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-card h1 {
+  font-size: 1.3rem;
+}
+
+.profile-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.profile-card .btn-outline {
+  margin-left: auto;
+}
+
+.profile-empty {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.profile-empty a {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.profile-saved-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.profile-saved-list a {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.profile-saved-list img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.profile-saved-list span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  background: linear-gradient(0deg, rgba(15, 30, 26, 0.9), transparent);
+  color: var(--ivory);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .profile-card {
+    flex-wrap: wrap;
+  }
+  .profile-card .btn-outline {
+    margin-left: 0;
+  }
+  .profile-saved-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

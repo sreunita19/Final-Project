@@ -1,0 +1,14 @@
+.favorites-page {
+  padding: 70px 8%;
+  min-height: 55vh;
+}
+
+.favorites-empty {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--gold);
+}
+
+.favorites-empty p {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,218 @@
+.admin-page{
+    min-height:100vh;
+    background: var(--color-bg);
+    padding:120px 6% 80px;
+    display:grid;
+    grid-template-columns: 260px 1fr;
+    gap:36px;
+    align-items:start;
+}
+
+.admin-header{
+    grid-column:1 / -1;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:8px;
+}
+
+.admin-header h1{
+    font-size:2rem;
+    color: var(--color-stone);
+}
+
+.admin-header .eyebrow{
+    display:block;
+    margin-bottom:10px;
+}
+
+.admin-status{
+    font-family: var(--font-mono);
+    font-size:0.78rem;
+    padding:8px 14px;
+    border-radius:3px;
+    border:1px solid var(--color-line);
+    color: var(--color-stone-dim);
+}
+.admin-status.success{
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+.admin-status.error{
+    border-color: var(--color-clay);
+    color: var(--color-clay);
+}
+
+/* Sidebar */
+
+.admin-sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    position:sticky;
+    top:120px;
+}
+
+.admin-sidebar-item{
+    text-align:left;
+    background: var(--color-bg-elevated);
+    border:1px solid var(--color-line);
+    border-radius:4px;
+    padding:14px 16px;
+    color: var(--color-stone-dim);
+    font-size:0.9rem;
+    cursor:pointer;
+}
+
+.admin-sidebar-item.active{
+    border-color: var(--color-gold);
+    color: var(--color-stone);
+}
+
+.admin-sidebar-new{
+    margin-top:6px;
+}
+
+/* Form */
+
+.admin-form{
+    background: var(--color-bg-elevated);
+    border:1px solid var(--color-line);
+    border-radius:6px;
+    padding:32px;
+}
+
+.admin-field{
+    margin-bottom:18px;
+}
+
+.admin-field label{
+    display:block;
+    font-family: var(--font-mono);
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color: var(--color-stone-dim);
+    margin-bottom:8px;
+}
+
+.admin-field input,
+.admin-field textarea{
+    width:100%;
+    background: var(--color-bg);
+    border:1px solid var(--color-line);
+    border-radius:3px;
+    padding:11px 13px;
+    color: var(--color-stone);
+    font-family: var(--font-body);
+    font-size:0.92rem;
+}
+
+.admin-field textarea{
+    resize:vertical;
+    min-height:70px;
+}
+
+.admin-field input:focus,
+.admin-field textarea:focus{
+    outline:none;
+    border-color: var(--color-gold);
+}
+
+.admin-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.admin-divider{
+    border:none;
+    border-top:1px solid var(--color-line);
+    margin:28px 0;
+}
+
+.admin-section-title{
+    font-family: var(--font-mono);
+    font-size:0.75rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color: var(--color-river);
+    margin-bottom:16px;
+}
+
+.admin-place{
+    border:1px solid var(--color-line);
+    border-radius:4px;
+    padding:18px;
+    margin-bottom:14px;
+    position:relative;
+}
+
+.admin-place-remove{
+    position:absolute;
+    top:14px;
+    right:14px;
+    background:transparent;
+    border:none;
+    color: var(--color-stone-dim);
+    cursor:pointer;
+    font-size:1.1rem;
+    line-height:1;
+}
+.admin-place-remove:hover{
+    color: var(--color-clay);
+}
+
+.admin-add-place{
+    font-family: var(--font-mono);
+    font-size:0.75rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    background:transparent;
+    border:1px dashed var(--color-line);
+    border-radius:3px;
+    padding:10px 16px;
+    color: var(--color-stone-dim);
+    width:100%;
+    cursor:pointer;
+}
+.admin-add-place:hover{
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+.admin-actions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:28px;
+}
+
+.admin-actions-left{
+    display:flex;
+    gap:12px;
+}
+
+.admin-danger{
+    background:transparent;
+    border:1px solid var(--color-clay);
+    color: var(--color-clay);
+}
+.admin-danger:hover{
+    background: var(--color-clay);
+    color: var(--color-stone);
+}
+
+@media(max-width:900px){
+    .admin-page{
+        grid-template-columns:1fr;
+    }
+    .admin-sidebar{
+        position:static;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    .admin-row{
+        grid-template-columns:1fr;
+    }
+}

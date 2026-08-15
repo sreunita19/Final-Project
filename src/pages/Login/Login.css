@@ -1,0 +1,10 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(50% 50% at 85% 15%, rgba(212, 166, 74, 0.14), transparent 60%),
+    var(--bg);
+  padding: 40px 6%;
+}

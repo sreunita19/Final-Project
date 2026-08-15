@@ -1,0 +1,93 @@
+.province-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.province-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 166, 74, 0.4);
+}
+
+.province-card-media {
+  display: block;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.province-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.province-card:hover .province-card-media img {
+  transform: scale(1.06);
+}
+
+.province-card-region {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  background: rgba(15, 30, 26, 0.75);
+  color: var(--gold-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.province-card-fav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(15, 30, 26, 0.65);
+  color: rgba(244, 239, 226, 0.7);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.province-card-badge{
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  background: rgba(15, 30, 26, 0.75);
+  color: var(--gold-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.province-card-fav:hover {
+  transform: scale(1.08);
+}
+
+.province-card-fav.is-active {
+  color: var(--terracotta);
+}
+
+.province-card-body {
+  padding: 18px 20px 22px;
+}
+
+.province-card-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.province-card-body p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

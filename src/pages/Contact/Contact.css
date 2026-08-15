@@ -1,0 +1,29 @@
+.contact-page {
+  padding: 70px 8%;
+}
+
+.contact-intro {
+  max-width: 560px;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+
+.contact-intro h1 {
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  margin: 14px 0 10px;
+}
+
+.contact-intro p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-form {
+  margin-top: 40px;
+}
+
+.contact-success {
+  color: var(--gold);
+  text-align: center;
+  padding: 20px 0;
+}
